@@ -1,0 +1,8 @@
+<a href="./add">thêm sản phẩm</a>
+<ul>
+    {{#each sp}}
+        <li> ID: {{id}} - TÊN: {{name}} - GIÁ: {{price}}</li>
+        <a href="./edit?id={{id}}">sửa</a>
+        <a href="./delete?id={{id}}">xóa</a>
+    {{/each}}
+</ul>

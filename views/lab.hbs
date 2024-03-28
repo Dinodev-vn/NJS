@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab</title>
+</head>
+<body>
+    <form action="../productsAPI/detailProductFind_price" method="get">
+    <label for="">Lấy ra danh sách các sản phẩm có giá tiền dưới x đồng</label>
+    <input type="text" name="inputPrice" placeholder="Nhập số tiền">
+    <button type="submit">GET</button>
+</form>
+<form action="../productsAPI/detailProductFind_priceXY" method="get">
+    <label for="">Lấy ra danh sách các sản phẩm trong khoảng từ x đến y</label>
+    <input type="text" name="getX" placeholder="Nhập X">
+    <input type="text" name="getY" placeholder="Nhập Y">
+    <button type="submit">GET</button>
+</form>
+<form action="../productsAPI/detailProductFind_hoa" method="get">
+    <label for="" style="display: inline;">Lấy ra danh sách các sản phẩm có CHỨA từ "hoa" trong tên</label>
+    <button type="submit">GET</button>
+</form>
+<div id="list-product hi">
+    <ol>
+        {{#each data}}
+            <li> ID: {{_id}} - name: {{name}} - price: {{price}}</li>
+       {{/each}}
+    </ol>
+</div>  
+<div id="list-product">
+    <ol>
+        {{#each ds}}
+        <li> ID: {{_id}} - name: {{name}} - price: {{price}}</li>
+       {{/each}}
+    </ol>
+</div>  
+</body>
+</html>
+
+<style>
+    /* Định dạng chung cho tất cả các form */
+form {
+    margin-bottom: 20px;
+}
+
+/* Định dạng các nhãn */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Định dạng các input */
+input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Định dạng nút submit */
+button[type="submit"] {
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Định dạng hover cho nút submit */
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+ol {
+  list-style-type: none; /* Ẩn chấm đánh dấu của danh sách có thứ tự */
+  padding: 0; /* Xóa padding mặc định của danh sách */
+  margin: 0; /* Xóa margin mặc định của danh sách */
+}
+
+li {
+    display: block;
+    width: 550px;
+  margin-bottom: 10px; /* Khoảng cách giữa các mục danh sách */
+  background-color: #f0f0f0; /* Màu nền của mỗi mục danh sách */
+  padding: 10px; /* Khoảng cách giữa nội dung của mỗi mục danh sách và viền của nó */
+  border-radius: 5px; /* Bo góc của mỗi mục danh sách */
+}
+
+
+</style>

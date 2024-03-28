@@ -1,0 +1,15 @@
+{
+    "product": [
+        {
+            "id": 1, "name": "bánh", "price": 1000,
+            "rating": [
+                {"id": 1,"iduser": 1, "rate": 3, "comment": "ngon quá"},
+                {"id": 2,"iduser": 2, "rate": 5, "comment": "ngon quá"},
+                {"id": 3,"iduser": 3, "rate": 2, "comment": "ngon quá"}
+            ]
+        },
+        {
+            "id": 2, "name": "kẹo", "price": 2000
+        }
+    ]
+}
