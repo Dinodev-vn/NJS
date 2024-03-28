@@ -11,7 +11,7 @@ require("./models/Product");
 
 
 //connect database
-mongoose.connect('mongodb://tuhd4:123456@localhost:27017/MORASHOP?authSource=admin&retryWrites=true', {})
+mongoose.connect('mongodb://localhost:27017/MORASHOP?authSource=admin&retryWrites=true', {})
   .then(() => console.log('>>>>>>>>>> DB Connected!!!!!!'))
   .catch(err => console.log('>>>>>>>>> DB Error: ', err));
 
